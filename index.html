@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dahej Calculator - Satirical Awareness Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/ig3.jpg'); background-size: cover; }
+        .card { transition: all 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        img.dramatic { filter: brightness(0.8) contrast(1.1); border-radius: 16px; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+
+    <!-- HEADER + NAV -->
+    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-calculator text-3xl text-purple-500"></i>
+                <h1 class="text-2xl font-bold text-purple-400">Dahej Calculator</h1>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#calculator" class="hover:text-purple-400 transition">Calculator</a>
+                <a href="#deconstructed" class="hover:text-purple-400 transition">Deconstructed</a>
+                <a href="#resources" class="hover:text-purple-400 transition">Resources</a>
+            </div>
+            <button onclick="location.reload()" class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-xl flex items-center gap-2 transition">
+                <i class="fa-solid fa-rotate"></i> Reset
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO / CALCULATOR ENTRY -->
+    <section class="hero-bg py-32 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl md:text-7xl font-bold mb-6 text-white">Find out your 'worth'</h2>
+            <p class="text-2xl md:text-3xl mb-10 text-gray-200">with our dahej calculator for groom.<br>A satirical look into the transaction.</p>
+            <a href="#calculator" class="bg-purple-600 hover:bg-purple-700 text-white px-10 py-5 rounded-2xl text-xl font-semibold transition">Start Calculation</a>
+        </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section id="calculator" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="bg-gray-900 rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-800 card">
+            <h3 class="text-4xl font-bold text-purple-400 mb-10 text-center">Calculate Satirical Expected Dahej</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Age</label>
+                    <select id="age" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                        <option value="">Select</option>
+                        <option value="under25">Under 25</option>
+                        <option value="25-30">25-30</option>
+                        <option value="31-35">31-35</option>
+                        <option value="over35">Over 35</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Profession</label>
+                    <select id="profession" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                        <option value="">Select</option>
+                        <option value="engineer">Engineer</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="lawyer">Lawyer</option>
+                        <option value="business">Businessman/Entrepreneur</option>
+                        <option value="govt">Government Job</option>
+                        <option value="other">Other/Private</option>
+                        <option value="unemployed">Unemployed</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Education Level</label>
+                    <select id="education" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                        <option value="">Select</option>
+                        <option value="highschool">High School / 12th</option>
+                        <option value="bachelors">Bachelor's</option>
+                        <option value="masters">Master's</option>
+                        <option value="phd">PhD / Professional</option>
+                        <option value="iit">IIT/IIM / Top Tier</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Monthly Salary (₹)</label>
+                    <input type="number" id="salary" min="0" placeholder="e.g. 150000" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Height (cm)</label>
+                    <input type="number" id="height" min="140" max="220" placeholder="e.g. 175" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Home Ownership</label>
+                    <div class="flex gap-6 items-center">
+                        <label class="flex items-center gap-2"><input type="radio" name="home" value="yes" class="accent-purple-500"> Yes</label>
+                        <label class="flex items-center gap-2"><input type="radio" name="home" value="no" checked class="accent-purple-500"> No</label>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Land Ownership</label>
+                    <div class="flex gap-6 items-center">
+                        <label class="flex items-center gap-2"><input type="radio" name="land" value="yes" class="accent-purple-500"> Yes</label>
+                        <label class="flex items-center gap-2"><input type="radio" name="land" value="no" checked class="accent-purple-500"> No</label>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Car Ownership</label>
+                    <div class="flex gap-6 items-center">
+                        <label class="flex items-center gap-2"><input type="radio" name="car" value="yes" class="accent-purple-500"> Yes</label>
+                        <label class="flex items-center gap-2"><input type="radio" name="car" value="no" checked class="accent-purple-500"> No</label>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Marital Status</label>
+                    <select id="marital" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                        <option value="single">Single</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-3 text-gray-300">Govt Job in Family?</label>
+                    <div class="flex gap-6 items-center">
+                        <label class="flex items-center gap-2"><input type="radio" name="govtfamily" value="yes" class="accent-purple-500"> Yes</label>
+                        <label class="flex items-center gap-2"><input type="radio" name="govtfamily" value="no" checked class="accent-purple-500"> No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-6 mt-12">
+                <button onclick="calculateDahej()" class="flex-1 bg-purple-600 hover:bg-purple-700 py-5 rounded-2xl text-xl font-bold transition">Calculate Dahej</button>
+                <button onclick="resetForm()" class="px-10 bg-gray-800 hover:bg-gray-700 rounded-2xl text-xl font-bold transition">Reset</button>
+            </div>
+
+            <div id="result" class="hidden mt-12 bg-gray-800/60 rounded-3xl p-10 border border-purple-900/50 result">
+                <h3 class="text-3xl font-bold text-purple-300 mb-6 text-center">Your Satirical Result 😂</h3>
+                <div id="dahejAmount" class="text-6xl font-bold text-red-500 mb-8 text-center"></div>
+                <div class="bg-gray-900 rounded-2xl p-6">
+                    <h4 class="text-xl font-semibold text-purple-400 mb-4">Expected Wife Profile 💍</h4>
+                    <div id="wifeDesc" class="text-lg leading-relaxed text-gray-300"></div>
+                </div>
+                <div class="flex flex-wrap gap-4 mt-10">
+                    <button onclick="shareWhatsApp()" class="flex-1 bg-green-600 hover:bg-green-700 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Share on WhatsApp
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWRY DECONSTRUCTED SECTION (matching screenshot) -->
+    <section id="deconstructed" class="bg-black py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl md:text-6xl font-bold text-center mb-16 text-purple-300">Dowry Deconstructed: From Tradition to Transaction</h2>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-20">
+                <div>
+                    <img src="images/ig2.jpg" 
+                         alt="Chained hands symbolizing burden" class="dramatic w-full mb-6 shadow-2xl">
+                    <h3 class="text-3xl font-bold text-red-400 mb-6">From Security to Burden: The Twisted History</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        The practice of dowry has ancient roots across various global cultures. It often began as a form of bridal wealth, intended to grant a woman financial independence in her new life. However, this concept has been twisted over the centuries into a coercive demand, transforming from a gift of security into a transaction that puts a price tag on a bride and imposes crippling debt on her family.
+                    </p>
+                </div>
+
+                <div>
+                    <img src="images/ig1.webp" 
+                         alt="Hands in unity circle with light" class="dramatic w-full mb-6 shadow-2xl">
+                    <h3 class="text-3xl font-bold text-green-400 mb-6">A New Generation's Choice: Respect Over Ritual</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        A cultural shift is gaining momentum. Today's generation, armed with education and a global perspective, is increasingly rejecting these outdated norms. They are championing marriages built on compatibility and mutual respect. This movement is bolstered by widespread social media campaigns and grassroots activism, fostering a new narrative where a person's worth is not determined by a financial transaction.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-3xl p-10 border border-gray-800">
+                <h3 class="text-3xl font-bold text-blue-400 mb-6">The Law vs. Reality: India's Firm Stance</h3>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Legally, India took a firm stand against dowry decades ago. The Dowry Prohibition Act of 1961 makes it a criminal offense to demand, give, or take dowry. This landmark legislation provides legal tools to fight the practice, yet the gap between the law and its enforcement remains a significant challenge, making legal awareness crucial for protecting women's rights.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DID YOU KNOW + RESOURCES -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-950">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-gray-900 rounded-3xl p-12 mb-16 border border-purple-900/30">
+                <h2 class="text-4xl font-bold text-center mb-10 text-purple-300">Did You Know? Key Facts About Dowry</h2>
+                <div class="space-y-8 text-lg text-gray-300">
+                    <p>Dowry has been officially illegal in India for over 60 years? The Dowry Prohibition Act of 1961 was passed specifically to outlaw the practice of giving or receiving dowry.</p>
+                    <p>Despite being illegal, the practice persists in the shadows across many parts of South Asia. It remains a deeply entrenched social custom that puts immense financial and emotional pressure on families.</p>
+                    <p>A hopeful change is underway. More and more young people are rejecting this tradition, choosing instead to build marriages based on mutual respect, equality, and partnership, not on financial transactions.</p>
+                </div>
+            </div>
+
+            <div id="resources" class="text-center">
+                <h2 class="text-4xl font-bold mb-10 text-purple-300">Resources</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <a href="https://ncw.nic.in/dowry-prohibition-act-1961/" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-8 rounded-2xl transition text-center">
+                        <h4 class="text-xl font-semibold mb-3">National Commission for Women</h4>
+                        <p class="text-gray-400">Dowry Prohibition Act info</p>
+                    </a>
+                    <a href="https://www.unicef.org/india/what-we-do/end-child-marriage" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-8 rounded-2xl transition text-center">
+                        <h4 class="text-xl font-semibold mb-3">UNICEF India</h4>
+                        <p class="text-gray-400">Ending Child Marriage</p>
+                    </a>
+                    <a href="https://www.unwomen.org/en/what-we-do/ending-violence-against-women" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-8 rounded-2xl transition text-center">
+                        <h4 class="text-xl font-semibold mb-3">UN Women</h4>
+                        <p class="text-gray-400">Ending Violence Against Women</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCLAIMER + FOOTER -->
+    <footer class="bg-gray-950 py-16 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="bg-red-900/30 rounded-3xl p-10 mb-12">
+                <h3 class="text-3xl font-bold text-red-400 mb-6">Strong Disclaimer</h3>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    This calculator is purely satirical and is intended to highlight the problematic nature of dowry practices. It is not meant to encourage or promote dowry in any way. We strongly support the elimination of dowry practices and advocate for marriages based on equality and respect in all relationships. Dowry is illegal — demanding/giving it can lead to jail.
+                </p>
+            </div>
+
+            <p class="text-gray-500 text-sm">© 2026 Dahej Awareness Project • Educational & Satirical Purposes Only </p>
+            <p class="text-purple-500 mt-4">Marriages should be about love, not transactions. End dahej. ✊</p>
+        </div>
+    </footer>
+
+    <!-- JS same as before (calculateDahej, reset, share functions) -->
+    <script>
+        function calculateDahej() {
+            // Get all inputs
+            const age = document.getElementById('age').value;
+            const prof = document.getElementById('profession').value;
+            const edu = document.getElementById('education').value;
+            const salary = parseFloat(document.getElementById('salary').value) || 0;
+            const height = parseFloat(document.getElementById('height').value) || 170;
+            const home = document.querySelector('input[name="home"]:checked')?.value || 'no';
+            const land = document.querySelector('input[name="land"]:checked')?.value || 'no';
+            const car = document.querySelector('input[name="car"]:checked')?.value || 'no';
+            const marital = document.getElementById('marital').value;
+            const govtfamily = document.querySelector('input[name="govtfamily"]:checked')?.value || 'no';
+
+            if (!age || !prof || !edu) {
+                alert("Baby, fill the main fields at least!");
+                return;
+            }
+
+            // Enhanced satirical algorithm
+            let base = 1500000;
+            let ageMult = age === 'under25' ? 1.4 : age === 'over35' ? 0.6 : 1.0;
+            let profMult = {engineer:1.5, doctor:2.2, lawyer:1.7, business:3.0, govt:2.0, other:1.2, unemployed:0.3}[prof] || 1;
+            let eduMult = {highschool:0.8, bachelors:1.3, masters:1.9, phd:2.6, iit:3.5}[edu] || 1;
+            let salaryFactor = salary * 0.2; // 20% of annual (approx monthly*12)
+            let heightMult = height > 180 ? 1.3 : height < 165 ? 0.7 : 1.0;
+            let assetMult = (home === 'yes' ? 1.8 : 1) * (land === 'yes' ? 2.5 : 1) * (car === 'yes' ? 1.4 : 1);
+            let maritalMult = marital === 'single' ? 1 : 0.4; // penalty for previously married
+            let govtMult = govtfamily === 'yes' ? 1.6 : 1;
+
+            let score = base * ageMult * profMult * eduMult * heightMult * assetMult * maritalMult * govtMult + salaryFactor;
+            let dahej = Math.round(score / 100000) * 100000;
+
+            let dahejStr = dahej >= 10000000 
+                ? `₹ ${(dahej / 10000000).toFixed(1)} Crore` 
+                : `₹ ${(dahej / 100000).toFixed(0)} Lakh`;
+
+            document.getElementById('dahejAmount').innerHTML = `Expected Dahej: ${dahejStr} 💰`;
+
+            // Wife profiles (updated for higher accuracy/absurdity)
+            const profiles = [
+                {min: 100000000, desc: "Elite Global Diva 🔥\nExpects luxury villa, international trips, no household work ever."},
+                {min: 50000000, desc: "Premium Bahu Package 💎\nSuper educated, model looks, demands high-end car + designer life."},
+                {min: 20000000, desc: "Modern Yet Traditional Queen 👑\nBeautiful, smart, cooks sometimes... but wants flat in her name + equality."},
+                {min: 5000000, desc: "Adjusting & Loving Partner ❤️\nValues rishta over paisa, but still expects basic respect."},
+                {min: 0, desc: "True Love Match 💕\nZero dahej believer – you found the rare one!"}
+            ];
+            const profile = profiles.find(p => dahej >= p.min) || profiles[4];
+            document.getElementById('wifeDesc').innerHTML = profile.desc.replace(/\n/g, '<br>');
+
+            document.getElementById('result').classList.remove('hidden');
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetForm() {
+            document.getElementById('result').classList.add('hidden');
+            document.querySelectorAll('input, select').forEach(el => {
+                if (el.type === 'radio') el.checked = el.defaultChecked;
+                else if (el.tagName === 'SELECT') el.selectedIndex = 0;
+                else el.value = '';
+            });
+        }
+
+        function shareWhatsApp() {
+            const text = `${document.getElementById('dahejAmount').innerText}\n${document.getElementById('wifeDesc').innerText}\nSatirical only! Check yours: YOUR_SITE_LINK #DahejCalculator #StopDowry`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        function shareTwitter() {
+            const text = `${document.getElementById('dahejAmount').innerText}\n${document.getElementById('wifeDesc').innerText}\nSatire awareness → YOUR_SITE_LINK`;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
